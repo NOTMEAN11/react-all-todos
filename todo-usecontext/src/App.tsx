@@ -1,7 +1,18 @@
+import { useContext } from "react";
 import AddTodo from "./components/add-todo";
 import Todo from "./components/todo";
+import TodoContext from "./contexts/todoContext";
 
 function App() {
+  const { setTodos } = useContext(TodoContext);
+
+  async function LoadTodo() {
+    const res = await fetch(
+      "https://raw.githubusercontent.com/NOTMEAN11/react-all-todos/master/data/todos.json"
+    );
+    const data = await res.json();
+    setTodos(data);
+  }
   return (
     <div className="container mx-auto ">
       <div className="flex items-center justify-center min-h-screen h-full flex-col">
@@ -11,7 +22,7 @@ function App() {
           <Todo />
         </div>
         <div>
-          <button className="w-[600px] btn btn-primary my-4" disabled>
+          <button className="w-[600px] btn btn-primary my-4" onClick={LoadTodo}>
             Load Todo
           </button>
         </div>
