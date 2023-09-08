@@ -6,7 +6,13 @@ function App() {
   const [todoText, setTodoText] = useState("");
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  function loadTodo() {}
+  async function loadTodo() {
+    const res = await fetch(
+      "https://raw.githubusercontent.com/NOTMEAN11/react-all-todos/master/data/todos.json"
+    );
+    const data = await res.json();
+    setTodos(data);
+  }
 
   return (
     <div className="container mx-auto ">
@@ -27,7 +33,7 @@ function App() {
           />
         </div>
         <div>
-          <button className="w-[600px] btn btn-primary my-4" disabled>
+          <button className="w-[600px] btn btn-primary my-4" onClick={loadTodo}>
             Load Todo
           </button>
         </div>
