@@ -10,6 +10,10 @@ this repo is a collection of react todos app with many ways to imporve my react 
 - [Dasy UI](https://daisyui.com/) - A component library for Tailwind CSS & React
 
 ## Todos App with many ways
- 1. [React Todos App with useState Hook](https://github.com/NOTMEAN11/react-all-todos/tree/master/todo-usestate) - This is a todos app with react and useState hook.
+ 1. [ App with useState Hook](https://github.com/NOTMEAN11/react-all-todos/tree/master/todo-usestate) - This is a todos app with react and useState hook.
 
- 2. [React Todos App with React Context]() - This is a todos app with react and React Context.
+ 2. [ App with React Context]() - This is a todos app with react and React Context.
+ 3. [ App with Custom Hook]() - This is a todos app with react and Custom Hook.
+ 4. [ App with Redux Toolkit]() - This is a todos app with react and Redux Toolkit.
+ 5. [ App with Jotai]() - This is a todos app with react and Jotai.
+ 6. [ App with Zustand]() - This is a todos app with react and Zustand.
